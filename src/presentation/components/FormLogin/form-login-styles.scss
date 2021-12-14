@@ -1,0 +1,40 @@
+@import "src/presentation/styles/colors";
+
+.form{
+  display: flex;
+  flex-direction: column;
+  background-color: $white;
+  padding: 40px;
+  width: 400px;
+  border-radius: 8px;
+  align-self: center;
+  box-shadow: 0 1px 3px -1px $black;
+  margin: 20px 0;
+
+  h2 {
+    color: $primaryDark;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .submit {
+    margin-top: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .link {
+    text-align: center;
+    color: $primary;
+    text-transform: lowercase;
+    margin-top: 16px;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+}
