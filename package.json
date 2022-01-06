@@ -24,6 +24,7 @@
     "faker": "^5.5.3",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.4.4",
+    "jest-localstorage-mock": "^2.4.18",
     "node-sass": "^7.0.0",
     "sass-loader": "^12.4.0",
     "style-loader": "^3.3.1",

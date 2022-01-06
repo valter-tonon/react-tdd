@@ -5,7 +5,9 @@ import Context from "@/presentation/components/context/form-context";
 import {useContext} from "react";
 
 export const ErrorForm = () => {
-    const {isLoading, errorMessage} = useContext(Context);
+
+    const {state} = useContext(Context);
+    const {isLoading, errorMessage} = state;
 
     return (
         <div data-testid={'error-wrap'} className={Styles.errorWrap}>
@@ -13,7 +15,7 @@ export const ErrorForm = () => {
                 isLoading && <Spinner className={Styles.spinner}/>
             }
             {
-                errorMessage && <span className={Styles.error}>{errorMessage}</span>
+                errorMessage && <span data-testid="main-error" className={Styles.error}>{errorMessage}</span>
             }
         </div>
     );
