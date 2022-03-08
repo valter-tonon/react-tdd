@@ -32,4 +32,18 @@ describe('AxiosHttpClient', () => {
         const promise = sut.post(request);
         expect(promise).toEqual(mockedAxios.post.mock.results[0].value as any)
     })
+
+    test('Should return the correct statusCode and body on failure',  () => {
+        const {sut, mockedAxios} = makeSut()
+        mockedAxios.post.mockRejectedValueOnce({
+            response: {
+                status: 500,
+                data: {
+                    message: 'error'
+                }
+            }
+        })
+        const promise = sut.post(mockPostRequest());
+        expect(promise).toEqual(mockedAxios.post.mock.results[0].value)
+    })
 })
