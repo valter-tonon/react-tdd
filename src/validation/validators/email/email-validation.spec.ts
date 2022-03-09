@@ -1,6 +1,6 @@
 import {EmailValidation} from "@/validation/validators/email/email-validation";
 import {InvalidFieldError} from "@/validation/errors/invalid-field-error";
-import * as faker from "faker";
+import faker from "@faker-js/faker";
 
 const makeSut = (field: string): EmailValidation => new EmailValidation(field);
 

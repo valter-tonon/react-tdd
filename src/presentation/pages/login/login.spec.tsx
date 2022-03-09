@@ -1,5 +1,4 @@
 import React from "react";
-import faker from "faker";
 import { Router } from "react-router-dom";
 import 'jest-localstorage-mock';
 import {cleanup, fireEvent, render, RenderResult, waitFor} from "@testing-library/react";
@@ -8,6 +7,7 @@ import {ValidationStub} from "@/presentation/test";
 import {AuthenticationSpy} from "@/presentation/test/mock-authentication";
 import {InvalidCredentialsError} from "@/domain/errors/invalid-credentials-error";
 import {createMemoryHistory} from "history";
+import faker from "@faker-js/faker";
 
 
 type SutTypes = {
